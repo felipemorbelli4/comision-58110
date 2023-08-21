@@ -19,23 +19,6 @@ en la consola.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let productos = [
     { nombre: "guante buceo", precio: 18000, },
     { nombre: "chaleco smooth", precio: 46900, },
