@@ -3,10 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript</title>
-    <script src="./js/main.js"></script>
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/320a27dfc8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
+    <div >
+        
+        <header class="titulo-Logo">
+            <div class="carrito-sobrenosotros">
+                <i class="fa-brands fa-github fa-lg"></i>
+                <i class="fa-brands fa-linkedin fa-lg" style="color: #000000;"></i>
+                <i class="fa-brands fa-instagram fa-lg" style="color: #000000;"></i>
+                <i class="fa-brands fa-discord fa-lg" style="color: #000000;"></i>
+                <li class="boton-menu"><a class="boton-menu" href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i> Carrito <span id="numerito"  class="numeros-productos">0</span></a></li>
+            </div>
+            
+            <div class="logo-titulo">
+                <img class="logo-img" src="./assets/images/cropped-AS2008v12-1000-3.png" alt="logo"  >
+            
+            </div>
+            <a href="./index.html"><p class="logo-aparte">ArgentinaSubacuatica</p> </a>
+            <nav>
+                <ul>
+
+                    <h3  class="nuestras-categorias">Nuestras Categorías <i class="fa-solid fa-angles-right"></i></h2>
+
+                    <li><button id="todos"  class="boton-menu boton-categoria active"> Todos los productos </button></li>
+
+                    <li><button  id="buceo-deportivo"  class="boton-menu boton-categoria"><i class="fa-solid fa-chevron-right fa-lg" style="color: #000000;"></i> Buceo Deportivo  </button></li>
+
+                    <li><button id="snorkeling"  class="boton-menu boton-categoria"><i class="fa-solid fa-chevron-right fa-lg" style="color: #000000;"></i> Snorkeling</button></li>
+
+                    <li><button id="surf"   class="boton-menu boton-categoria"><i class="fa-solid fa-chevron-right fa-lg" style="color: #000000;"></i> Surf</button></li>
+
+                    <li><button  id="natacion"     class="boton-menu  boton-categoria"><i class="fa-solid fa-chevron-right fa-lg" style="color: #000000;"></i> Natación</button></li>
+
+                    
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h2 id="titulo-principal" class="titulo-principal"> Todos nuestros productos</h2>
+            <div id="contenedor-productos" class="contenedor-productos">
+                <!--Esto se rellena con JavaScript-->
+            </div>
+        </main>
+        <footer>
+            <p class="footer-texto">© 2023 ArgentinaSubacuatica</p>
+        </footer>
+    </div>
+
+
+
+
     
+    <script src="js/main.js"></script>
 </body>
 </html>

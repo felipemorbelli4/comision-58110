@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Alata&family=Belgrano&family=Lexend+Mega:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea{
+    margin: 0;
+}
+
+
+
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+header ul {
+    display: flex;
+    justify-content: center;
+    padding-right: 10.5rem;
+    gap: 1.3rem;
+    
+}
+
+
+
+
+
+.carrito-sobrenosotros{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding-top: 2rem;
+}
+
+
+.logo-img{
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.logo-titulo{
+    display: flex;
+    justify-content: center;
+;
+}
+
+
+
+.logo-aparte{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.4rem;
+    padding-bottom: 1.5rem;
+    font-family: 'Belgrano', serif;
+    
+}
+
+
+.nuestras-categorias{
+    font-family: 'Lexend Mega', sans-serif;
+}
+
+
+
+.boton-menu{
+    border-radius: 1rem;
+    border: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color .50s;
+    color: black;
+    width: auto;
+    font-family: 'Abel', sans-serif;
+}
+
+.boton-menu:hover{
+    
+    color: rgba(51, 48, 42, 0.486);
+}
+
+
+
+
+.titulo-principal{
+    color: #000000;
+    font-family: 'Belgrano', serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+
+}
+
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+
+.producto-imagen{
+    max-width: 100%;
+    border: solid black;
+    border-radius: 5rem;
+    
+}
+
+.producto{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5rem;
+    margin-bottom: 5rem;
+}
+
+.producto-detalles{
+    margin-top: 1rem;
+    position: relative;
+    color: rgb(0, 0, 0);
+    
+    margin-bottom: 3rem;
+    padding: .4rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.producto-titulo{
+    color: rgb(0, 0, 0);
+    font-family: 'Abel', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 0.90rem;
+    font-size: 1rem;
+}
+
+.producto-precio{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    padding: 0.90rem;
+    font-size: 1rem;
+}
+
+
+.producto-agregar{
+    font-family: 'Alata', sans-serif;
+    color: black;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 0.60rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color .50s, color 1s;
+    text-decoration:underline;
+}
+
+
+
+
+.footer-texto{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+
+.producto-agregar:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+
+
+aside{
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    
+    
+}
+
+
+
+
+aside nav ul{
+    text-decoration: none;
+    color: black;
+}
+
+
+.carrito-productos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.carrito-producto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: #574f4f46;
+    border-radius: 1rem;
+}
+
+
+
+
+.carrito-producto img{
+    width: 4rem;
+    border-radius: 1rem;
+    margin: 0.3rem;
+}
+
+
+
+
+
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: rgb(255, 255, 255);
+    margin: 1rem;
+}
+
+
+
+
+
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+
+.logo-carrito{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+
+
+
+
+.footer-texto-carrito{
+    color: rgb(0, 0, 0);
+    padding-top: 11rem;
+}
+
+
+.main-carrito{
+    margin: 2rem;
+    border-radius: 1rem;
+    background-color: #000000;
+}
+
+
+
+
+
+.carrito-producto-titulo{
+    color: white;
+    font-family: 'Alata', sans-serif;
+}
+
+
+.carrito-producto-precio{
+    color: white;
+    font-family: 'Alata', sans-serif;
+}
+
+
+.carrito-producto-cantidad{
+    color: white;
+    font-family: 'Alata', sans-serif;
+}
+
+
+.carrito-producto-subtotal{
+    color: white;
+    font-family: 'Alata', sans-serif;
+}
+
+
+
+
+
+.carrito-producto p{
+    font-size: 0.8rem;
+}
+
+
+
+
+.carrito-producto small{
+    font-size: 0.7rem;
+}
+
+
+.titulo-carrito{
+    padding: 2rem;
+    font-size: 2.3rem;
+    font-family: 'Belgrano', serif;
+}
+
+
+
+
+.carrito-vacio{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+
+
+.carrito-producto-eliminar{
+    border: 0;
+    background-color: transparent;
+    color: rgba(255, 0, 0, 0.623);
+    font-size: 0.9rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.contenedor-carrito{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.carrito-acciones{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.carrito-acciones-total{
+    color: white;
+    margin: 2rem;
+}
+
+
+
+.carrito-acciones-derecha{
+    display: flex;
+    border: solid rgba(255, 255, 255, 0.055);
+    border-radius: 1rem;
+    align-items: center;
+    font-family: 'Belgrano', serif;
+    padding-right: 5rem;
+}
+
+
+
+
+.total{
+    padding-bottom: 0.5rem;
+}
+
+
+.comprar-ahora{
+    cursor: pointer;
+    color: white;
+    background-color: gray;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+.carrito-acciones-comprar{
+    
+    border: 0;
+    background-color: gray;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: whitesmoke;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin: 0.4rem;
+}
+
+
+
+
+
+.carrito-acciones-vaciar{
+    border: 0;
+    background-color: gray;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: whitesmoke;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+
+
+
+
+.disabled{
+    display: none;
+}

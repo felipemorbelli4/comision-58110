@@ -1,125 +1,214 @@
-
-/*
-En esta preentrega hice un eCommerce, cree un Array con productos, cada uno con su nombre y su precio.
-
-Primero hay un mensaje de bienvenida donde se debe poner un nombre de usuario válido, si el usuario es correcto lo 
-llevará a la lista de los productos, de lo contrario se corta el código. Allí el usuario deberá ir eligiendo todos los productos que desee
-y además deberá elegir la cantidad que desee llevar.
-Una vez que finalice con la elección de los productos y las cantidades le dará el total a pagar, y le mostrará las elecciones que hizo
-en la consola.
-*/
-
-
-
-
-
-
-
-
-
-
-
 let productos = [
-    { nombre: "guante buceo", precio: 18000, },
-    { nombre: "chaleco smooth", precio: 46900, },
-    { nombre: "cressi pro star", precio: 52897, },
-    { nombre: "cressi quantum", precio: 77266, },
-    { nombre: "pino tokyo", precio: 154000, },
-    { nombre: "pino raia", precio: 147285, },
-    {nombre: "orca hydro", precio: 20500,},
-    {nombre: "aquon casco", precio: 12500,},
+    {
+        id: "1",
+        nombre: "Guante Buceo 3 mm",
+        precio: 18000,
+        categoria: {
+            nombre:"Buceo Deportivo",
+            id:"buceo-deportivo"
+        },
+        imagen: "./assets/images/guante-buceo-1x1-21-60edd2ee70780856bf16209307655468-480-0.jpg"
+    },
+    {
+        id: "2",
+        nombre: "Chaleco Smooth 3mm",
+        precio: 46900,
+        categoria: {
+            nombre:"Buceo Deportivo",
+            id:"buceo-deportivo"
+        },
+        imagen: "./assets/images/chaleco-con-capucha-frente1-5192d2a5e4c5873f8416382790043113-640-0.jpg"
+    },
+    {
+        id: "3",
+        nombre: "Cressi Pro Star",
+        precio: 52897,
+        categoria: {
+            nombre:"Snorkeling",
+            id:"snorkeling"
+        },
+        imagen: "./assets/images/pro-star-2-1x11-0c60bc623fb59ef4c016209241224715-640-0.jpg"
+    },
+    {
+        id: "4",
+        nombre: "Cressi Quantum",
+        precio: 77266,
+        categoria: {
+            nombre:"Snorkeling",
+            id:"snorkeling"
+        },
+        imagen: "./assets/images/211-85f7df42276d0bdf4b16876149168569-640-0.webp"
+    },
+    {
+        id: "5",
+        nombre: "Pino Tokyo 4/3 mm",
+        precio: 154000,
+        categoria: {
+            nombre: "Surf",
+            id:"surf"
+        },
+        imagen: "./assets/images/pino-tokyo-4-3-bs-021-2f36e825f2f20ccde716548610964340-640-0.jpg"
+    },
+    {
+        id: "6",
+        nombre: "Pino Raia 3mm",
+        precio: 147285,
+        categoria:{
+            nombre: "Surf",
+            id:"surf"
+        },
+        imagen: "./assets/images/raia-masculino-azul-3mm-061-b3c177f97f10cb8bd816373429271341-640-0.jpg"
+    },
+    {
+        id: "7",
+        nombre: "Orca Hydro",
+        precio: 20500,
+        categoria: {
+            nombre:"Natación",
+            id:"natacion"
+        },
+        imagen: "./assets/images/111-b63f01ce99bc33ceb916495157367410-640-0.png"
+    },
+    {
+        id: "8",
+        nombre: "Aquon Casco Natacion 3mm",
+        precio: 12500,
+        categoria: {
+            nombre:"Natación",
+            id:"natacion"
+        },
+        imagen: "./assets/images/aquon-capuz-natacao-011-513ac703826965596016382791094925-640-0.jpg"
+    },
 ]
 
-let carrito = []
-
-let usuario = prompt("Bienvenido, escriba su nombre de usuario por favor, No dejar en blanco. ")
-while(usuario === ""){
-    alert("Le recomendamos que escriba un nombre de usuario válido, gracias")
-    usuario = prompt("Indique su nombre de usuario por favor: ")
-}
 
 
-
-let mensaje = alert(`Bienvenido ${usuario}`)
-
-let seleccion = prompt(`¿Desea ver la lista de nuestros productos de buceo ${usuario}? \n Si es así escriba Si, de lo contrario, escriba No `) 
-
-while(seleccion != "Si" && seleccion != "No"){
-    alert("Por favor, escriba Si o No en el teclado, con la primera letra en mayúsculas.")
-    seleccion = prompt("¿Desea ver nuestra lista de productos?")
-    
-}
-
-if (seleccion === "Si"){
-    alert("A continuación nuestra lista de productos de Buceo: ")
-    let todoslosProductos = productos.map(
-        (producto) => producto.nombre + " " + producto.precio + "$"
-    )
-    alert(todoslosProductos.join("\n - "))
-}else if (seleccion === "No"){
-    alert(`Gracias por su visita ${usuario}, hasta pronto!`)
-    
-} 
-
-while(seleccion !=  "No"){
-let producto = prompt ("Agregue el producto que desee al carrito, escribiendo el nombre del producto\n\nguante buceo\nchaleco smooth\ncressi pro star\ncressi quantum\npino tokyo\npino raia\norca hydro\naquon casco" )
-let precio = 0
-
-if (producto == "guante buceo" || producto == "chaleco smooth" || producto == "cressi pro star" || producto == "cressi quantum" ||
-    producto == "pino tokyo" || producto == "pino raia" || producto == "orca hydro" || producto == "aquon casco" ){
-    switch (producto){
-        case "guante buceo":
-            precio = 18000;
-            break;
-        case "chaleco smooth":
-            precio = 46900;
-            break;
-        case "cressi pro star":
-            precio = 52897;
-            break;
-        case "cressi quantum":
-            precio = 77266;
-            break;
-        case "pino tokyo":
-            precio = 154000;
-            break;
-        case "pino raia":
-            precio = 147285;
-            break;
-        case "orca hydro":
-            precio = 20500;
-            break;
-        case "aquon casco":
-            precio = 12500;
-            break;
-        default:
-            break;
-    }
-    let unidades = parseInt(prompt("Cuantas unidades desea llevar?"))
-
-    carrito.push({producto, unidades, precio})
-    console.log(carrito)
-}else{
-    alert("no tenemos ese producto, lo sentimos mucho")
-}
+const contenedorProductos = document.querySelector("#contenedor-productos");
+const botonesCategorias = document.querySelectorAll(".boton-categoria");
+const tituloPrincipal = document.querySelectorAll("#titulo-principal");
+let botonesAgregar = document.querySelectorAll(".producto-agregar");
+const numerito = document.querySelector("#numerito");
 
 
 
-seleccion = prompt("¿Desea seguir seleccionando productos? En caso de no querer seguir con la compra escriba: No\n En caso contrario escriba: Si")
-while(seleccion === "No"){
-    alert("Gracias por la compra! Hasta pronto!")
-    carrito.forEach((carritoFinal)=> {
-        console.log(`producto:${carritoFinal.producto}, unidades: ${carrito.unidades},
-        El total a pagar es de ${carritoFinal.unidades * carritoFinal.precio}`)
+
+
+
+function cargarProductos (productosElegidos){
+
+    contenedorProductos.innerHTML = "";
+
+    productosElegidos.forEach(producto =>{
+
+        const div = document.createElement("div");
+        div.classList.add("producto");
+        div.innerHTML = `
+            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.nombre}">
+            <div class="producto-detalles">
+                <h3 class="producto-titulo"> ${producto.nombre} </h3>
+                <p class="producto-precio"> ${producto.precio}</p>
+                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+            </div>
+        `;
+        contenedorProductos.append(div);
     })
-    break;
+
+    actualizarBotonesAgregar();
 }
+
+
+
+cargarProductos(productos);
+
+
+
+
+botonesCategorias.forEach(boton => {
+    boton.addEventListener("click", (e) => {
+
+        botonesCategorias.forEach(boton => boton.classList.remove("active") );
+        e.currentTarget.classList.add("active");
+
+        
+        if (e.currentTarget.id !="todos"){
+            const productoCategoria = productos.find (producto => producto.categoria.id === e.currentTarget.id);
+            
+            tituloPrincipal.innerText = productoCategoria.categoria.nombre;
+
+            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+            cargarProductos(productosBoton);
+        }else{
+            tituloPrincipal.innerText = "Todos nuestros productos";
+            cargarProductos(productos);
+        }
+        
+        
+    })
+});
+
+
+
+
+
+function actualizarBotonesAgregar(){
+    botonesAgregar = document.querySelectorAll(".producto-agregar");
+
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener("click", agregarAlCarrito);
+    });
 }
 
 
 
-const total = carrito.reduce ((acc, el) => acc + el.precio * el.unidades, 0)
-console.log(`El total a pagar es de: ${total}`)
+let productosEnCarrito;
+
+const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
+    if(productosEnCarritoLS){
+        productosEnCarrito = productosEnCarritoLS
+        actualizarNumerito();
+    }else{
+        productosEnCarrito = []
+    }
 
 
 
+
+function agregarAlCarrito(e){
+    const idBoton = e.currentTarget.id;
+    
+    const productoAgregado = productos.find(producto => producto.id === idBoton);
+
+    if(productosEnCarrito.some(producto => producto.id === idBoton)){
+        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+        productosEnCarrito[index].cantidad++;
+    }else{
+        productoAgregado.cantidad = 1;
+        productosEnCarrito.push(productoAgregado);
+    }
+
+    actualizarNumerito();
+    
+
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+
+}
+
+
+
+function actualizarNumerito() {
+    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    numerito.innerText = nuevoNumerito;
+}
+
+
+
+
+/*<div class="producto">
+<img class="producto-imagen" src="./assets/images/guante-buceo-1x1-21-60edd2ee70780856bf16209307655468-480-0.jpg" alt="">
+<div class="producto-detalles">
+    <h3 class="producto-titulo"> Guante Buceo 3 mm </h3>
+    <p class="producto-precio"> $18000</p>
+    <button class="producto-agregar">Agregar al carrito</button>
+</div>
+</div>
+*/
