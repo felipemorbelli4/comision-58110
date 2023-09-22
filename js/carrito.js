@@ -106,9 +106,33 @@ function eliminarDelCarrito(e) {
 botonVaciar.addEventListener("click", vaciarCarrito);
 
 function vaciarCarrito () {
-    productosEnCarrito.length = 0;
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-    cargarProductosCarrito();
+    Swal.fire({
+        
+        color:`black`,
+        title: `Atención: <br>${productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0)} productos serán eliminados </br>`,
+        icon: 'warning',
+        html:
+            ' <b>¿Desea continuar y eliminar todos los productos?</b> ', 
+            
+        showCloseButton: true,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText:
+            '<i class="fa fa-thumbs-up"></i> Eliminar todos los productos',
+        confirmButtonAriaLabel: 'Thumbs up, great!',
+        cancelButtonText:
+            '<i class="fa fa-thumbs-down"></i> Seguir con los mismos productos',
+        cancelButtonAriaLabel: 'Thumbs down'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            productosEnCarrito.length = 0;
+            localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+            cargarProductosCarrito();
+        }
+    })
+
+
+
 }
 
 

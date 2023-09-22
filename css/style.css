@@ -118,22 +118,24 @@ header ul {
 
 .producto-imagen{
     max-width: 100%;
-    border: solid black;
-    border-radius: 5rem;
+    height: 20rem;
+    padding-left: 4rem;
     
 }
 
 .producto{
     background-color: rgb(255, 255, 255);
-    border-radius: 5rem;
+    border-radius: .90rem;
     margin-bottom: 5rem;
+    
+
 }
 
 .producto-detalles{
     margin-top: 1rem;
     position: relative;
     color: rgb(0, 0, 0);
-    
+    border: solid rgba(0, 0, 0, 0.075);
     margin-bottom: 3rem;
     padding: .4rem;
     border-radius: 1rem;
